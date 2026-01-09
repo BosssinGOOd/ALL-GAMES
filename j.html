@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ALL GAMES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+  <header class="header">
+    <div class="header-content">
+      <h1>ALL GAMES</h1>
+      <p>Все виды игр в одном месте</p>
+    </div>
+  </header>
+
+
+  <section class="cards-section">
+    <h2>Каталог игр</h2>
+
+    <select id="categoryFilter">
+      <option value="all">Все категории</option>
+      <option value="classic">Классика</option>
+      <option value="fantasy">Шутеры</option>
+      <option value="detective">Хоррор</option>
+    </select>
+
+    <div id="cardsContainer" class="cards-grid"></div>
+  </section>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn">&times;</button>
+      <img id="modalImg" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">ALL GAMES</div>
+
+      <div class="footer-links">
+        <a href="#">Игры</a>
+        <a href="#" id="openCommunity">Сообщество</a>
+
+
+      </div>
+
+      <div class="footer-copy">
+        © 2026 ALL GAMES. Все права защищены.
+        <div id="communityModal" class="modal hidden">
+          <div class="modal-content">
+            <button class="close-btn" id="closeCommunity">&times;</button>
+
+            <h3>Сообщество</h3>
+
+            <textarea id="messageInput" placeholder="Напиши сообщение..."></textarea>
+            <button id="sendMessage">Отправить</button>
+
+            <div id="messages"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <div id="communityModal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close-btn" id="closeCommunity">&times;</button>
+
+    <h3>Онлайн чат</h3>
+
+    <textarea id="messageInput" placeholder="Сообщение..."></textarea>
+    <button id="sendMessage">Отправить</button>
+
+    <div id="messages"></div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

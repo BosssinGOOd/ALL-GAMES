@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+
+    background: #f4f4f4;
+}
+
+body {
+    padding-top: 320px;
+
+}
+
+
+.cards-section {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+select {
+    display: block;
+    margin: 15px auto;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background-image: url("img/poster.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.header-content {
+    position: relative;
+    color: white;
+    padding: 40px;
+    z-index: 2;
+
+}
+
+
+.footer {
+    background: #0d0d0d;
+    color: #ccc;
+    padding: 40px 20px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #ccc;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-copy {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#sendMessage {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#messages {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.message {
+    background: #f1f1f1;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.message {
+    color: #000;
+}
+
+.message {
+    color: black !important;
+}
+
+.modal-content {
+    color: black;
+}
+
+textarea {
+    color: black;
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: white;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card:active .card-overlay,
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    background: white;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card:hover .card-overlay,
+.card:active .card-overlay {
+    opacity: 1;
+}
